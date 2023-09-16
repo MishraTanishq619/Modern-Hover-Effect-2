@@ -35,7 +35,9 @@ center.addEventListener(
 		img.setAttribute("src", arr[n]);
 		div.appendChild(img);
 		div.style.left = e.x - 100 + "px";
-		div.style.top = e.y + "px";
+		div.style.top = e.y - 200 + "px";
+		div.style.transform =
+			"rotate(" + Math.floor(Math.random(5) * 40 - 20) + "deg)";
 
 		document.body.appendChild(div);
 
@@ -54,7 +56,7 @@ center.addEventListener(
 
 			setTimeout(() => {
 				div.remove();
-			}, 300);
-		}, 300);
-	}, 200)
+			}, 500);
+		}, 500);
+	}, 100)
 );
